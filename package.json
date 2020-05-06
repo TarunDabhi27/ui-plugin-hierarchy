@@ -1,0 +1,39 @@
+{
+    "name": "@rs-ui-plugins/ui-plugin",
+    "version": "1.0.34",
+    "description": "{{PLUGIN_DESC}}",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/riversandtechnologies/{{PLUGIN_NAME}}.git"
+    },
+    "engines": {
+        "node": ">=10.0"
+    },
+    "license": "",
+    "module": "index.js",
+    "scripts": {
+        "clean-build": "gulp clean-build",
+        "bump-version": "gulp bump-version",
+        "compile-lib": "gulp compile-lib",
+        "compile": "gulp compile",
+        "create-artifact": "gulp create-artifact",
+        "deploy": "gulp deploy-artifact",
+        "compile-and-deploy": "gulp compile && gulp create-artifact && gulp deploy-artifact",
+        "lint/all": "node node_modules/eslint/bin/eslint --fix 'src/**' || true",
+        "watch": "watch 'npm run compile-and-deploy' ./src"
+    },
+    "dependencies": {
+        "config": "^3.2.4",
+        "ui-platform-aci": "github:riversandtechnologies/ui-platform-aci#dev",
+        "ui-platform-dataaccess": "github:riversandtechnologies/ui-platform-dataaccess#dev",
+        "ui-platform-elements": "github:riversandtechnologies/ui-platform-elements#dev",
+        "ui-platform-styles": "github:riversandtechnologies/ui-platform-styles#dev",
+        "ui-platform-tools": "github:riversandtechnologies/ui-platform-tools#dev",
+        "ui-platform-utils": "github:riversandtechnologies/ui-platform-utils#dev",
+        "underscore": "^1.9.1"
+    },
+    "devDependencies": {
+        "watch": "^1.0.2"
+    },
+    "author": "Riversand Technologies, Inc"
+}
